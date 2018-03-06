@@ -1,0 +1,25 @@
+{
+	"source": {
+		"csv": {
+			"path": "YOUR_PATH/enricher-clearbit/examples/companies.csv"
+		}
+	},
+	"target": {
+		"csv": {
+			"path": "YOUR_PATH/enricher-clearbit/examples/companies_enriched.csv"
+		}
+	},
+	"enrichers": [
+		{
+			"name": "Clearbit",
+			"path": "YOUR_PATH/enricher-clearbit",
+			"config": {
+				"api_key": "YOUR_KEY",
+				"endpoint": "company",
+				"input_parameter": "$.*.Domain",
+				"target_property": "information"
+			}
+		}
+	],
+	"name": "Clearbit enrichment"
+}
